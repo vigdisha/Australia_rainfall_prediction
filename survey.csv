@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rain in Australia | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Predict next-day rain in Australia" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="earth and nature,classification,weather and climate,binary classification" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" type="text/javascript">
+    window["pageRequestStartTime"] = 1677076338503;
+    window["pageRequestEndTime"] = 1677076338611;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/datasets/jsphyg/weather-dataset-rattle-package" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=4dbbcf8cb3d312f19f17" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=cd8745ef71013c8e17ff" />
+  
+    
+ 
+      <script nonce="gxDdot5kjCqqp9lJxYLX/Q==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="gxDdot5kjCqqp9lJxYLX/Q==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/datasets/jsphyg/weather-dataset-rattle-package" />
+    <meta property="og:title" content="Rain in Australia" />
+    <meta property="og:description" content="Predict next-day rain in Australia" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/6012/1733506/0a5af086168a9b87a38b29bac75aa8ce/dataset-card.jpg?t=2020-12-11-10-57-11" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Rain in Australia","description":"### Context\nPredict **next-day rain** by training classification models on the target variable **RainTomorrow**. \n\n\n\n### Content\nThis dataset contains about 10 years of daily weather observations from many locations across Australia.\n\n**RainTomorrow is the target variable to predict. It means -- did it rain the next day, Yes or No?\nThis column is Yes if the rain for that day was 1mm or more.**\n\n### Source &amp; Acknowledgements \nObservations were drawn from numerous weather stations. The daily observations are available from http://www.bom.gov.au/climate/data. \nAn example of latest weather observations in Canberra: http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml\n\nDefinitions adapted from http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml\nData source: http://www.bom.gov.au/climate/dwo/ and http://www.bom.gov.au/climate/data.\n\nCopyright Commonwealth of Australia 2010, Bureau of Meteorology.\n","url":"https://www.kaggle.com/jsphyg/weather-dataset-rattle-package","version":2,"keywords":["subject, earth and nature","task, classification","subject, earth and nature, environment, weather and climate","task, binary-classification"],"license":{"@type":"CreativeWork","name":"Other (specified in description)","url":""},"identifier":["6012"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Joe Young","url":"https://www.kaggle.com/jsphyg","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/860951-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package/download?datasetVersionNumber=2","contentSize":"4020790 bytes"}],"commentCount":19,"dateModified":"2020-12-11T10:26:12.167Z","discussionUrl":"https://www.kaggle.com/jsphyg/weather-dataset-rattle-package/discussion","alternateName":"Predict next-day rain in Australia","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/6012/1733506/0a5af086168a9b87a38b29bac75aa8ce/dataset-card.jpg?t=2020-12-11-10-57-11","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":19},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":96626},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":583189},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":1526}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+    <script nonce="gxDdot5kjCqqp9lJxYLX/Q==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="gxDdot5kjCqqp9lJxYLX/Q==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" src="/static/assets/runtime.js?v=efea8c0f477df8bd2ed3" data-turbolinks-track="reload"></script>
+  <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" src="/static/assets/vendor.js?v=44f57a659d5193fe0c41" data-turbolinks-track="reload"></script>
+  <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" src="/static/assets/app.js?v=2088520a212004d045ca" data-turbolinks-track="reload"></script>
+    <script nonce="gxDdot5kjCqqp9lJxYLX/Q==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="gxDdot5kjCqqp9lJxYLX/Q==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":6012,"slug":"weather-dataset-rattle-package","title":"Rain in Australia","description":"### Context\nPredict **next-day rain** by training classification models on the target variable **RainTomorrow**. \n\n\n\n### Content\nThis dataset contains about 10 years of daily weather observations from many locations across Australia.\n\n**RainTomorrow is the target variable to predict. It means -- did it rain the next day, Yes or No?\nThis column is Yes if the rain for that day was 1mm or more.**\n\n### Source \u0026 Acknowledgements \nObservations were drawn from numerous weather stations. The daily observations are available from http://www.bom.gov.au/climate/data. \nAn example of latest weather observations in Canberra: http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml\n\nDefinitions adapted from http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml\nData source: http://www.bom.gov.au/climate/dwo/ and http://www.bom.gov.au/climate/data.\n\nCopyright Commonwealth of Australia 2010, Bureau of Meteorology.\n","viewCount":583189,"downloadCount":96626,"scriptCount":509,"topicCount":19,"owner":{"id":860951,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/860951-kg.jpg","name":"Joe Young","profileUrl":"/jsphyg","slug":"jsphyg","userTier":"EXPERT"},"license":{"id":12,"name":"Other (specified in description)"},"overview":"Predict next-day rain in Australia","collaboratorList":{"owner":{"userId":860951,"profileUrl":"/jsphyg","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/860951-kg.jpg","name":"Joe Young","slug":"jsphyg","userTier":"EXPERT","type":"OWNER"},"collaborators":[{"userId":2650399,"profileUrl":"/adamyoung32","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/2650399-gr.jpg","name":"Adamyoung","slug":"adamyoung32","joinDate":"2019-12-18T20:07:08.717Z","type":"WRITER"}]},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/6012/1733506/0a5af086168a9b87a38b29bac75aa8ce/dataset-cover.jpg?t=2020-12-11-10-57-11","data":{"totalSize":4020790,"isFileset":true,"canDownload":true,"firestorePath":"dyRnIfv2pOnDWh1vbqnG/versions/PT93w1svgM4nduBLQF9w","downloadUrl":"/datasets/jsphyg/jsphyg/download?datasetVersionNumber=2","versionId":1770518,"id":6012},"voteCount":1526,"medalUrl":"/static/images/medals/datasets/goldl@2x.png","downloadUrl":"/datasets/jsphyg/weather-dataset-rattle-package/download?datasetVersionNumber=2","lastUpdateTime":"2020-12-11T10:26:12.167Z","datasetVersionNumber":2,"creatorDisplayName":"Joe Young","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/6012/1733506/0a5af086168a9b87a38b29bac75aa8ce/dataset-card.jpg?t=2020-12-11-10-57-11","categories":{"tags":[{"id":7000,"name":"earth and nature","fullPath":"subject \u003E earth and nature","listingUrl":"/datasets?group=public\u0026tagids=7000","description":"","datasetCount":23787,"competitionCount":5,"notebookCount":263,"tagUrl":"/tags/natural-and-physical-sciences","displayName":"Earth and Nature"},{"id":13302,"name":"classification","fullPath":"task \u003E classification","listingUrl":"/datasets?group=public\u0026tagids=13302","description":"","datasetCount":3178,"competitionCount":6,"notebookCount":16647,"tagUrl":"/tags/classification","displayName":"Classification"},{"id":7408,"name":"weather and climate","fullPath":"subject \u003E earth and nature \u003E environment \u003E weather and climate","listingUrl":"/datasets?group=public\u0026tagids=7408","description":"Weather datasets and kernels come in all wind speeds and directions. You have weather data about hurricanes and other inclement phenomena, hourly readings, and general weather for various cities.","datasetCount":796,"competitionCount":2,"notebookCount":450,"tagUrl":"/tags/weather","displayName":"Weather and Climate"},{"id":14201,"name":"binary classification","fullPath":"task \u003E binary-classification","listingUrl":"/datasets?group=public\u0026tagids=14201","description":"","datasetCount":718,"competitionCount":3409,"notebookCount":5411,"tagUrl":"/tags/binary-classification","displayName":"Binary Classification"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package","forumId":12369,"datasetVersionId":1733506,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":2,"diffType":"VERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script><script nonce="gxDdot5kjCqqp9lJxYLX/Q==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="gxDdot5kjCqqp9lJxYLX/Q==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
